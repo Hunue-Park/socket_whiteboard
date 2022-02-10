@@ -1,6 +1,7 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState} from 'react';
 import io from 'socket.io-client';
 import './Canvas.css';
+import CodeEditor from '@uiw/react-textarea-code-editor';
 
 const Canvas = () => {
 
@@ -44,6 +45,7 @@ const Canvas = () => {
             findxy('up', event)
         }
         
+
         let prevX = 0, currX = 0, prevY = 0, currY = 0, flag = false;
 
         const canvas = document.getElementById('canvas');
